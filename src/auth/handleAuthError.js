@@ -3,15 +3,18 @@ export const handleAuthError = (error) => {
     return "User does not exist"
   }
 
-  if (error.code === "auth/invalid-email") {
+  else if (error.code === "auth/invalid-email") {
     return "Enter a valid email address"
   }
 
-  if (error.code === "auth/wrong-password") {
+  else if (error.code === "auth/wrong-password") {
     return "Invalid credentials"
   }
 
-  if (error.code === "auth/weak-password") {
+  else if (error.code === "auth/weak-password") {
     return "Weak Password"
+  }
+  else{
+    return `${error.code}`;
   }
 }
