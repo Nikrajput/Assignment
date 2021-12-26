@@ -10,4 +10,8 @@ export const handleAuthError = (error) => {
   if (error.code === "auth/wrong-password") {
     return "Invalid credentials"
   }
+
+  if (error.code === "auth/weak-password") {
+    return "Weak Password"
+  }
 }
